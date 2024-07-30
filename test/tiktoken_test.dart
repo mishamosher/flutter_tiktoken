@@ -11,6 +11,7 @@ void main() {
     expect(encodingForModel("gpt2").name, equals("gpt2"));
     expect(encodingForModel("text-davinci-003").name, equals("p50k_base"));
     expect(encodingForModel("gpt-3.5-turbo").name, equals("cl100k_base"));
+    expect(encodingForModel("gpt-4o").name, equals("o200k_base"));
     expect(
       () => encodingForModel("gpt2-unknown"),
       throwsA(isA<TiktokenError>()),
@@ -62,6 +63,35 @@ void main() {
           allowedSpecial: SpecialTokensSet.all(),
         ),
         orderedEquals(Uint32List.fromList([31373, 220, 50256])),
+      );
+    });
+  });
+
+  group("gpt-4o", () {
+    final enc = getEncoding("o200k_base");
+
+    test("encodes hello world string", () {
+      expect(
+        enc.encode("hello world"),
+        orderedEquals(Uint32List.fromList([24912, 2375])),
+      );
+    });
+
+    test("decodes hello world string", () {
+      expect(
+          utf8.decode(
+            enc.decodeBytes(Uint32List.fromList([24912, 2375])),
+          ),
+          equals("hello world"));
+    });
+
+    test("encodes hello world string, all allowed special characters", () {
+      expect(
+        enc.encode(
+          "hello<|endoftext|><|endofprompt|>",
+          allowedSpecial: SpecialTokensSet.all(),
+        ),
+        orderedEquals(Uint32List.fromList([24912, 199999, 200018])),
       );
     });
   });

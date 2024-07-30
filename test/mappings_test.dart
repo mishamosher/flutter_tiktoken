@@ -9,6 +9,7 @@ void main() {
       expect(encodingForModel("ada").name, "r50k_base");
       expect(encodingForModel("cushman-codex").name, "p50k_base");
       expect(encodingForModel("code-davinci-edit-001").name, "p50k_edit");
+      expect(encodingForModel("gpt-4o").name, "o200k_base");
     });
 
     test('throws on unknown model name', () {
