@@ -11,3 +11,6 @@ pubspec.lock
 
 # VSCODE config directory
 .vscode/
+
+# JetBrains IDEs config directory
+.idea/
