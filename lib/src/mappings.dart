@@ -4,15 +4,20 @@ import 'package:tiktoken/tiktoken.dart';
 // ignore: constant_identifier_names
 const _MODEL_PREFIX_TO_ENCODING = {
   // chat
+  "gpt-4o-": "o200k_base", // e.g., gpt-4o-2024-05-13
   "gpt-4-": "cl100k_base", // e.g., gpt-4-0314, etc., plus gpt-4-32k
-  "gpt-3.5-turbo-": "cl100k_base" // e.g, gpt-3.5-turbo-0301, -0401, etc.
+  "gpt-3.5-turbo-": "cl100k_base", // e.g, gpt-3.5-turbo-0301, -0401, etc.
+  "gpt-35-turbo-": "cl100k_base",
 };
 
 // ignore: constant_identifier_names
 const _MODEL_TO_ENCODING = {
   // chat
+  "gpt-4o": "o200k_base",
   "gpt-4": "cl100k_base",
   "gpt-3.5-turbo": "cl100k_base",
+  "gpt-3.5": "cl100k_base",  // Common shorthand
+  "gpt-35-turbo": "cl100k_base",  // Azure deployment name
   // text
   "text-davinci-003": "p50k_base",
   "text-davinci-002": "p50k_base",

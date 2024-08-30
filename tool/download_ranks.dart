@@ -43,6 +43,13 @@ void main() async {
     "cl100kBase",
   );
 
+  await dumpTiktokenBpe(
+    await loadTiktokenBpe(
+        "https://openaipublic.blob.core.windows.net/encodings/o200k_base.tiktoken"),
+    "./lib/src/ranks/o200k_base.tiktoken",
+    "o200kBase",
+  );
+
   stdout.writeln("Downloaded all encodings OK!");
 
   File("./lib/src/ranks/index.dart").writeAsStringSync([
@@ -50,6 +57,7 @@ void main() async {
     "export 'cl100k_base.tiktoken.dart';",
     "export 'r50k_base.tiktoken.dart';",
     "export 'p50k_base.tiktoken.dart';",
+    "export 'o200k_base.tiktoken.dart';"
   ].join("\n"));
 
   stdout.writeln("Generated ranks index file OK!");

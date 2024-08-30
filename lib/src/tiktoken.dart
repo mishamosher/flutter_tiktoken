@@ -83,7 +83,6 @@ class Tiktoken {
   late final CoreBPE _coreBPE;
 
   late final int maxTokenValue;
-
   /// Encodes a string into tokens.
   ///
   /// Special tokens are artificial tokens used to unlock capabilities from a model,

@@ -38,6 +38,9 @@ Tiktoken getEncoding(String encodingName) {
     case "p50k_edit":
       constructor = CoreBPEConstructor.p50kEdit();
       break;
+    case "o200k_base":
+      constructor = CoreBPEConstructor.o200k_base();
+      break;
     default:
       throw TiktokenError("Unknown encoding $encodingName");
   }
