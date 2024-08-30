@@ -3,8 +3,8 @@
 
 library tiktoken;
 
-import 'package:tiktoken/src/core_bpe_constructor.dart';
-import 'package:tiktoken/src/error/tiktoken_error.dart';
+import 'package:mishamosher_tiktoken/src/core_bpe_constructor.dart';
+import 'package:mishamosher_tiktoken/src/error/tiktoken_error.dart';
 
 import 'src/tiktoken.dart';
 

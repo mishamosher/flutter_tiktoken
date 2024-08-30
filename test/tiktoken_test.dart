@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:test/test.dart';
-import 'package:tiktoken/src/error/tiktoken_error.dart';
-import 'package:tiktoken/src/ranks/index.dart';
-import 'package:tiktoken/tiktoken.dart';
+import 'package:mishamosher_tiktoken/src/error/tiktoken_error.dart';
+import 'package:mishamosher_tiktoken/src/ranks/index.dart';
+import 'package:mishamosher_tiktoken/tiktoken.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

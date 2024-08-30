@@ -1,6 +1,6 @@
 import 'dart:collection';
 
-import 'package:tiktoken/src/common/byte_array.dart';
+import 'package:mishamosher_tiktoken/src/common/byte_array.dart';
 
 /// Max value of 32-bit signed integer
 // ignore: constant_identifier_names

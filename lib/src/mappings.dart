@@ -1,5 +1,5 @@
-import 'package:tiktoken/src/error/tiktoken_error.dart';
-import 'package:tiktoken/tiktoken.dart';
+import 'package:mishamosher_tiktoken/src/error/tiktoken_error.dart';
+import 'package:mishamosher_tiktoken/tiktoken.dart';
 
 // ignore: constant_identifier_names
 const _MODEL_PREFIX_TO_ENCODING = {

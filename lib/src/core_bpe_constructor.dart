@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:tiktoken/src/common/byte_array.dart';
+import 'package:mishamosher_tiktoken/src/common/byte_array.dart';
 
 import 'ranks/index.dart';
 

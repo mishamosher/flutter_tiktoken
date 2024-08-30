@@ -2,9 +2,9 @@ import 'dart:collection';
 import 'dart:convert';
 import 'dart:typed_data';
 
-import 'package:tiktoken/src/common/byte_array.dart';
-import 'package:tiktoken/src/common/tuple2.dart';
-import 'package:tiktoken/src/error/tiktoken_error.dart';
+import 'package:mishamosher_tiktoken/src/common/byte_array.dart';
+import 'package:mishamosher_tiktoken/src/common/tuple2.dart';
+import 'package:mishamosher_tiktoken/src/error/tiktoken_error.dart';
 
 import 'common/utils.dart' as util;
 

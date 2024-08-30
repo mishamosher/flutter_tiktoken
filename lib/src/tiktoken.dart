@@ -1,10 +1,10 @@
 import 'dart:math';
 import 'dart:typed_data';
 
-import 'package:tiktoken/src/common/byte_array.dart';
-import 'package:tiktoken/src/common/tuple2.dart';
-import 'package:tiktoken/src/core_bpe.dart';
-import 'package:tiktoken/src/error/tiktoken_error.dart';
+import 'package:mishamosher_tiktoken/src/common/byte_array.dart';
+import 'package:mishamosher_tiktoken/src/common/tuple2.dart';
+import 'package:mishamosher_tiktoken/src/core_bpe.dart';
+import 'package:mishamosher_tiktoken/src/error/tiktoken_error.dart';
 
 import 'common/special_tokens_set.dart';
 

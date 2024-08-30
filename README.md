@@ -21,14 +21,14 @@ For more examples, see the `/example` folder.
 First Step initData()
 
 ```dart
-import 'package:tiktoken/tiktoken.dart';
+import 'package:mishamosher_tiktoken/tiktoken.dart';
 void main() async {
   await TiktokenDataProcessCenter().initata();
 }
 ```
 
 ```dart
-import 'package:tiktoken/tiktoken.dart';
+import 'package:mishamosher_tiktoken/tiktoken.dart';
 
 // Load an encoding
 final encoding = encodingForModel("gpt-4");
@@ -47,7 +47,7 @@ assert(enc.decode(enc.encode("hello world")) == "hello world");
 ## Extending tiktoken
 You may wish to extend `Tiktoken` to support new encodings. You can do this by passing around the existing model:
 ```dart
-import 'package:tiktoken/tiktoken.dart';
+import 'package:mishamosher_tiktoken/tiktoken.dart';
 
 // Create a base
 final cl100kBase = encodingForModel("cl100k_base");

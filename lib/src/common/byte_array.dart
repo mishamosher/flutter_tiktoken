@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
-import 'package:tiktoken/src/common/utils.dart';
+import 'package:mishamosher_tiktoken/src/common/utils.dart';
 
 /// Simple proxy for the Uint8List type.
 ///

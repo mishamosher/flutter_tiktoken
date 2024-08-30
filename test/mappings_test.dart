@@ -1,6 +1,6 @@
 import 'package:test/test.dart';
-import 'package:tiktoken/src/error/tiktoken_error.dart';
-import 'package:tiktoken/src/mappings.dart';
+import 'package:mishamosher_tiktoken/src/error/tiktoken_error.dart';
+import 'package:mishamosher_tiktoken/src/mappings.dart';
 
 void main() {
   group('mappings', () {
