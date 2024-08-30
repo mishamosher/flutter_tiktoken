@@ -8,7 +8,7 @@ import 'package:mishamosher_tiktoken/tiktoken.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await TiktokenDataProcessCenter().initata(ignorePackageName: true);
+  await TiktokenDataProcessCenter().initData(ignorePackageName: true);
   test("encodingForModel", () {
     expect(() => encodingForModel("gpt2"), returnsNormally);
     expect(encodingForModel("gpt2").name, equals("gpt2"));

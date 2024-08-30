@@ -23,7 +23,7 @@ First Step initData()
 ```dart
 import 'package:mishamosher_tiktoken/tiktoken.dart';
 void main() async {
-  await TiktokenDataProcessCenter().initata();
+  await TiktokenDataProcessCenter().initData();
 }
 ```
 

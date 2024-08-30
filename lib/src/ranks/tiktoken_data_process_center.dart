@@ -17,7 +17,7 @@ class TiktokenDataProcessCenter {
 
   TiktokenDataProcessCenter._internal();
 
-  Future<void> initata({bool ignorePackageName = false}) async {
+  Future<void> initData({bool ignorePackageName = false}) async {
     await initCl100kBaseData(ignorePackageName: ignorePackageName);
     await initGpt2Data(ignorePackageName: ignorePackageName);
     await initP50kBaseData(ignorePackageName: ignorePackageName);
