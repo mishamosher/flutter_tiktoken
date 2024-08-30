@@ -57,7 +57,7 @@ void main() async {
     "export 'cl100k_base.tiktoken.dart';",
     "export 'r50k_base.tiktoken.dart';",
     "export 'p50k_base.tiktoken.dart';",
-    "export 'o200k_base.tiktoken.dart';"
+    "export 'o200k_base.tiktoken.dart';",
   ].join("\n"));
 
   stdout.writeln("Generated ranks index file OK!");

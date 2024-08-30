@@ -18,6 +18,15 @@ The main `Tiktoken` class exposes APIs that allow you to process text using toke
 
 For more examples, see the `/example` folder.
 
+First Step initData()
+
+```dart
+import 'package:tiktoken/tiktoken.dart';
+void main() async {
+  await TiktokenDataProcessCenter().initata();
+}
+```
+
 ```dart
 import 'package:tiktoken/tiktoken.dart';
 
