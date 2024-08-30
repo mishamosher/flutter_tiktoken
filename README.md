@@ -18,15 +18,19 @@ The main `Tiktoken` class exposes APIs that allow you to process text using toke
 
 For more examples, see the `/example` folder.
 
-First Step initData()
+The first step is to initialize the encodings data via `initData()`
 
 ```dart
+import 'package:flutter/widgets.dart';
 import 'package:mishamosher_tiktoken/mishamosher_tiktoken.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await TiktokenDataProcessCenter().initData();
 }
 ```
+
+Using the library is simple enough:
 
 ```dart
 import 'package:mishamosher_tiktoken/mishamosher_tiktoken.dart';

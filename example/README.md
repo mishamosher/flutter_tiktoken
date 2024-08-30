@@ -1,3 +1,16 @@
+## Initialization
+The first step is to initialize the encodings data via `initData()`
+
+```dart
+import 'package:flutter/widgets.dart';
+import 'package:mishamosher_tiktoken/mishamosher_tiktoken.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await TiktokenDataProcessCenter().initData();
+}
+```
+
 ## Loading an encoding
 You can load an encoding by either `encoding name` or by `model name`:
 
