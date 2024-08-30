@@ -83,6 +83,7 @@ class Tiktoken {
   late final CoreBPE _coreBPE;
 
   late final int maxTokenValue;
+
   /// Encodes a string into tokens.
   ///
   /// Special tokens are artificial tokens used to unlock capabilities from a model,
@@ -106,13 +107,11 @@ class Tiktoken {
   /// enc.encode("<|endoftext|>") // Throws
   /// enc.encode("<|endoftext|>", disallowedSpecial: SpecialTokensSet.empty()); // [27, 91, 437, 1659, 5239, 91, 29]
   /// ```
-  Uint32List encode(
-    String text, {
+  Uint32List encode(String text, {
     SpecialTokensSet allowedSpecial = const SpecialTokensSet.empty(),
     SpecialTokensSet disallowedSpecial = const SpecialTokensSet.all(),
   }) {
-    final allowedSpecialSet =
-        allowedSpecial.isAll ? specialTokensSet : allowedSpecial.set;
+    final allowedSpecialSet = allowedSpecial.isAll ? specialTokensSet : allowedSpecial.set;
 
     final disallowedSpecialSet = disallowedSpecial.isAll
         ? specialTokensSet.difference(allowedSpecialSet)
@@ -154,13 +153,11 @@ class Tiktoken {
   /// assert(text.encode().startswith(enc.decode_bytes(stable_tokens)))
   /// assert all(enc.decode_bytes(stable_tokens + seq).startswith(text.encode()) for seq in completions)
   /// ```
-  Tuple2<List<int>, Set<List<int>>> encodeWithUnstable(
-    String text, {
+  Tuple2<List<int>, Set<List<int>>> encodeWithUnstable(String text, {
     SpecialTokensSet allowedSpecial = const SpecialTokensSet.empty(),
     SpecialTokensSet disallowedSpecial = const SpecialTokensSet.all(),
   }) {
-    final allowedSpecialSet =
-        allowedSpecial.isAll ? specialTokensSet : allowedSpecial.set;
+    final allowedSpecialSet = allowedSpecial.isAll ? specialTokensSet : allowedSpecial.set;
 
     final disallowedSpecialSet = disallowedSpecial.isAll
         ? specialTokensSet.difference(allowedSpecialSet)
@@ -210,8 +207,8 @@ class Tiktoken {
   /// ```
   String decode(List<int> tokens, {bool allowMalformed = true}) {
     return _coreBPE.decodeNative(tokens).asString(
-          allowMalformed: allowMalformed,
-        );
+      allowMalformed: allowMalformed,
+    );
   }
 
   /// Decodes a token into bytes.
