@@ -23,6 +23,7 @@ First Step initData()
 ```dart
 import 'package:mishamosher_tiktoken/mishamosher_tiktoken.dart';
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await TiktokenDataProcessCenter().initData();
 }
 ```
