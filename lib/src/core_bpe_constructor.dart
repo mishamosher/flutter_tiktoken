@@ -32,8 +32,7 @@ class CoreBPEConstructor {
     return CoreBPEConstructor._(
       name: "gpt2",
       explicitNVocab: 50257,
-      patStr:
-          r"'s|'t|'re|'ve|'m|'ll|'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+",
+      patStr: r"'s|'t|'re|'ve|'m|'ll|'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+",
       mergeableRanks: TiktokenDataProcessCenter().gpt2.map(
             (k, v) => MapEntry(ByteArray.fromList(base64Decode(k)), v),
           ),
@@ -45,8 +44,7 @@ class CoreBPEConstructor {
     return CoreBPEConstructor._(
       name: "r50k_base",
       explicitNVocab: 50257,
-      patStr:
-          r"""'s|'t|'re|'ve|'m|'ll|'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+""",
+      patStr: r"""'s|'t|'re|'ve|'m|'ll|'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+""",
       mergeableRanks: TiktokenDataProcessCenter().r50kBase.map(
             (k, v) => MapEntry(ByteArray.fromList(base64Decode(k)), v),
           ),
@@ -58,8 +56,7 @@ class CoreBPEConstructor {
     return CoreBPEConstructor._(
       name: "p50k_base",
       explicitNVocab: 50281,
-      patStr:
-          r"""'s|'t|'re|'ve|'m|'ll|'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+""",
+      patStr: r"""'s|'t|'re|'ve|'m|'ll|'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+""",
       mergeableRanks: TiktokenDataProcessCenter().p50kBase.map(
             (k, v) => MapEntry(ByteArray.fromList(base64Decode(k)), v),
           ),
@@ -70,8 +67,7 @@ class CoreBPEConstructor {
   factory CoreBPEConstructor.p50kEdit() {
     return CoreBPEConstructor._(
       name: "p50k_edit",
-      patStr:
-          r"""'s|'t|'re|'ve|'m|'ll|'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+""",
+      patStr: r"""'s|'t|'re|'ve|'m|'ll|'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+""",
       mergeableRanks: TiktokenDataProcessCenter().p50kBase.map(
             (k, v) => MapEntry(ByteArray.fromList(base64Decode(k)), v),
           ),
@@ -87,8 +83,7 @@ class CoreBPEConstructor {
   factory CoreBPEConstructor.cl100kBase() {
     return CoreBPEConstructor._(
       name: "cl100k_base",
-      patStr:
-          r"(\?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\r\n\p{L}\p{N}]?\p{L}+|\p{N}{1,3}| ?[^\s\p{L}\p{N}]+[\r\n]*|\s*[\r\n]+|\s+(?!\S)|\s+",
+      patStr: r"(\?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\r\n\p{L}\p{N}]?\p{L}+|\p{N}{1,3}| ?[^\s\p{L}\p{N}]+[\r\n]*|\s*[\r\n]+|\s+(?!\S)|\s+",
       mergeableRanks: TiktokenDataProcessCenter().cl100kBase.map(
             (k, v) => MapEntry(ByteArray.fromList(base64Decode(k)), v),
           ),
