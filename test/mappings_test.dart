@@ -6,7 +6,7 @@ import 'package:test/test.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await TiktokenDataProcessCenter().initData(ignorePackageName: true);
-  
+
   group('mappings', () {
     test('finds correct encoding for model name', () {
       expect(encodingForModel("gpt-3.5-turbo-0301").name, "cl100k_base");

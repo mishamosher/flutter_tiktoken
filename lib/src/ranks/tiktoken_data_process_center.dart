@@ -25,7 +25,11 @@ class TiktokenDataProcessCenter {
     await initEncodingData(encoding: 'o200k_base', map: o200kBase, ignorePackageName: ignorePackageName);
   }
 
-  Future<void> initEncodingData({required String encoding, required Map<String, int> map, bool ignorePackageName = false}) async {
+  Future<void> initEncodingData({
+    required String encoding,
+    required Map<String, int> map,
+    bool ignorePackageName = false
+  }) async {
     var prefix = _prefix;
     if (ignorePackageName == true) {
       prefix = '';

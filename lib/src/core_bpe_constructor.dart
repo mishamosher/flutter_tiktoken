@@ -35,8 +35,8 @@ class CoreBPEConstructor {
       patStr:
           r"'s|'t|'re|'ve|'m|'ll|'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+",
       mergeableRanks: TiktokenDataProcessCenter().gpt2.map(
-        (k, v) => MapEntry(ByteArray.fromList(base64Decode(k)), v),
-      ),
+            (k, v) => MapEntry(ByteArray.fromList(base64Decode(k)), v),
+          ),
       specialTokens: {ENDOFTEXT: 50256},
     );
   }
@@ -48,8 +48,8 @@ class CoreBPEConstructor {
       patStr:
           r"""'s|'t|'re|'ve|'m|'ll|'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+""",
       mergeableRanks: TiktokenDataProcessCenter().r50kBase.map(
-        (k, v) => MapEntry(ByteArray.fromList(base64Decode(k)), v),
-      ),
+            (k, v) => MapEntry(ByteArray.fromList(base64Decode(k)), v),
+          ),
       specialTokens: {ENDOFTEXT: 50256},
     );
   }
@@ -61,8 +61,8 @@ class CoreBPEConstructor {
       patStr:
           r"""'s|'t|'re|'ve|'m|'ll|'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+""",
       mergeableRanks: TiktokenDataProcessCenter().p50kBase.map(
-        (k, v) => MapEntry(ByteArray.fromList(base64Decode(k)), v),
-      ),
+            (k, v) => MapEntry(ByteArray.fromList(base64Decode(k)), v),
+          ),
       specialTokens: {ENDOFTEXT: 50256},
     );
   }
@@ -73,8 +73,8 @@ class CoreBPEConstructor {
       patStr:
           r"""'s|'t|'re|'ve|'m|'ll|'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+""",
       mergeableRanks: TiktokenDataProcessCenter().p50kBase.map(
-        (k, v) => MapEntry(ByteArray.fromList(base64Decode(k)), v),
-      ),
+            (k, v) => MapEntry(ByteArray.fromList(base64Decode(k)), v),
+          ),
       specialTokens: {
         ENDOFTEXT: 50256,
         FIM_PREFIX: 50281,
@@ -90,8 +90,8 @@ class CoreBPEConstructor {
       patStr:
           r"(\?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\r\n\p{L}\p{N}]?\p{L}+|\p{N}{1,3}| ?[^\s\p{L}\p{N}]+[\r\n]*|\s*[\r\n]+|\s+(?!\S)|\s+",
       mergeableRanks: TiktokenDataProcessCenter().cl100kBase.map(
-        (k, v) => MapEntry(ByteArray.fromList(base64Decode(k)), v),
-      ),
+            (k, v) => MapEntry(ByteArray.fromList(base64Decode(k)), v),
+          ),
       specialTokens: {
         ENDOFTEXT: 100257,
         FIM_PREFIX: 100258,
@@ -116,7 +116,7 @@ class CoreBPEConstructor {
       ].join('|'),
       mergeableRanks: TiktokenDataProcessCenter().o200kBase.map(
             (k, v) => MapEntry(ByteArray.fromList(base64Decode(k)), v),
-      ),
+          ),
       specialTokens: {
         ENDOFTEXT: 199999,
         ENDOFPROMPT: 200018,

@@ -207,8 +207,8 @@ class Tiktoken {
   /// ```
   String decode(List<int> tokens, {bool allowMalformed = true}) {
     return _coreBPE.decodeNative(tokens).asString(
-      allowMalformed: allowMalformed,
-    );
+          allowMalformed: allowMalformed,
+        );
   }
 
   /// Decodes a token into bytes.

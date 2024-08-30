@@ -16,7 +16,6 @@ void main() async {
   };
 
   for (var key in map.keys) {
-
     var data = map[key];
     if (data == null) {
       continue;
