@@ -1,11 +1,15 @@
 MIT License
 
-Portions of this package were originally written in Rust/Python by Shantanu Jain, and have been ported to Dart by Marin Vitlov. 
+Portions of this package were originally written in Rust/Python by Shantanu Jain, and have been ported to Dart by Marin Vitlov.
+Various improvements have been made by different authors.
 This code is licensed under the MIT license, as follows:
 
 MIT License
 
 Copyright (c) 2023 Marin Vitlov
+Copyright (c) 2023 JerryFans
+Copyright (c) 2024 MQahawish
+Copyright (c) 2024 Elmer Miroslav Mosher Golovin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
