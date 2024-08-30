@@ -1,7 +1,7 @@
 /// tiktoken is a [BPE](https://en.wikipedia.org/wiki/Byte_pair_encoding) tokeniser for use with OpenAI's models.
 /// It exposes APIs used to process text using tokens.
 
-library tiktoken;
+library mishamosher_tiktoken;
 
 import 'package:mishamosher_tiktoken/src/core_bpe_constructor.dart';
 import 'package:mishamosher_tiktoken/src/error/tiktoken_error.dart';
