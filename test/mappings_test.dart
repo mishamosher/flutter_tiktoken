@@ -1,8 +1,12 @@
-import 'package:test/test.dart';
+import 'package:flutter/widgets.dart';
+import 'package:mishamosher_tiktoken/mishamosher_tiktoken.dart';
 import 'package:mishamosher_tiktoken/src/error/tiktoken_error.dart';
-import 'package:mishamosher_tiktoken/src/mappings.dart';
+import 'package:test/test.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await TiktokenDataProcessCenter().initData(ignorePackageName: true);
+  
   group('mappings', () {
     test('finds correct encoding for model name', () {
       expect(encodingForModel("gpt-3.5-turbo-0301").name, "cl100k_base");

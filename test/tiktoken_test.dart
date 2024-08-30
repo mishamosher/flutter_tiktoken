@@ -1,14 +1,14 @@
 import 'dart:convert';
 import 'dart:typed_data';
-import 'package:flutter/material.dart';
-import 'package:test/test.dart';
-import 'package:mishamosher_tiktoken/src/error/tiktoken_error.dart';
-import 'package:mishamosher_tiktoken/src/ranks/index.dart';
+import 'package:flutter/widgets.dart';
 import 'package:mishamosher_tiktoken/mishamosher_tiktoken.dart';
+import 'package:mishamosher_tiktoken/src/error/tiktoken_error.dart';
+import 'package:test/test.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await TiktokenDataProcessCenter().initData(ignorePackageName: true);
+
   test("encodingForModel", () {
     expect(() => encodingForModel("gpt2"), returnsNormally);
     expect(encodingForModel("gpt2").name, equals("gpt2"));
