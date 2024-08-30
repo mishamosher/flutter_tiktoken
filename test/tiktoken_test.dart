@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:test/test.dart';
 import 'package:mishamosher_tiktoken/src/error/tiktoken_error.dart';
 import 'package:mishamosher_tiktoken/src/ranks/index.dart';
-import 'package:mishamosher_tiktoken/tiktoken.dart';
+import 'package:mishamosher_tiktoken/mishamosher_tiktoken.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
