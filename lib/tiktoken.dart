@@ -11,6 +11,7 @@ import 'src/tiktoken.dart';
 export 'src/common/special_tokens_set.dart';
 export 'src/mappings.dart';
 export 'src/tiktoken.dart';
+export 'src/ranks/tiktoken_data_process_center.dart';
 
 // ignore: non_constant_identifier_names
 final _ENCODINGS = <String, Tiktoken>{};
