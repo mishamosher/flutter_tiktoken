@@ -23,4 +23,4 @@ flutter:
     - lib/tokens/gpt2/
     - lib/tokens/p50k_base/
     - lib/tokens/r50k_base/
-
+    - lib/tokens/o200k_base/

@@ -23,7 +23,6 @@ First Step initData()
 ```dart
 import 'package:tiktoken/tiktoken.dart';
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
   await TiktokenDataProcessCenter().initata();
 }
 ```

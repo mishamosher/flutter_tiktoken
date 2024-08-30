@@ -102,6 +102,28 @@ class CoreBPEConstructor {
     );
   }
 
+  factory CoreBPEConstructor.o200kBase() {
+    return CoreBPEConstructor._(
+      name: "o200k_base",
+      patStr: [
+        r"""[^\r\nA-Za-z0-9]?[\p{Lu}\p{Lt}\p{Lm}\p{Lo}\p{M}]*[a-z\p{Lm}\p{Lo}\p{M}]+(?:'s|'t|'re|'ve|'m|'ll|'d)?""",
+        r"""[^\r\nA-Za-z0-9]?[\p{Lu}\p{Lt}\p{Lm}\p{Lo}\p{M}]+[a-z\p{Lm}\p{Lo}\p{M}]*(?:'s|'t|'re|'ve|'m|'ll|'d)?""",
+        r"""[0-9]{1,3}""",
+        r""" ?[^\sA-Za-z0-9]+[\r\n/]*""",
+        r"""\s*[\r\n]+""",
+        r"""\s+(?!\S)""",
+        r"""\s+""",
+      ].join('|'),
+      mergeableRanks: TiktokenDataProcessCenter().o200kBase.map(
+            (k, v) => MapEntry(ByteArray.fromList(base64Decode(k)), v),
+      ),
+      specialTokens: {
+        ENDOFTEXT: 199999,
+        ENDOFPROMPT: 200018,
+      },
+    );
+  }
+
   final String name;
   final String patStr;
   final Map<ByteArray, int> mergeableRanks;
@@ -114,5 +136,6 @@ class CoreBPEConstructor {
     "p50k_base",
     "p50k_edit",
     "cl100k_base",
+    "o200k_base",
   };
 }

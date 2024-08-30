@@ -8,6 +8,7 @@ class TiktokenDataProcessCenter {
   Map<String, int> gpt2 = {};
   Map<String, int> r50kBase = {};
   Map<String, int> p50kBase = {};
+  Map<String, int> o200kBase = {};
 
   factory TiktokenDataProcessCenter() {
     return _singleton;
@@ -20,6 +21,7 @@ class TiktokenDataProcessCenter {
     await initGpt2Data(ignorePackageName: ignorePackageName);
     await initP50kBaseData(ignorePackageName: ignorePackageName);
     await initR50kBaseData(ignorePackageName: ignorePackageName);
+    await initO200kBaseData(ignorePackageName: ignorePackageName);
   }
 
   Future<void> initCl100kBaseData({bool ignorePackageName = false}) async {
@@ -75,6 +77,21 @@ class TiktokenDataProcessCenter {
     for (int i = 1; i <= 6; i++) {
       String jsonString =
           await rootBundle.loadString('${prefix}lib/tokens/r50k_base/r50k_base_$i.json');
+      Map<String, dynamic> jsonData = json.decode(jsonString);
+      Map<String, int> intData = jsonData.map((key, value) =>
+          MapEntry(key, value is int ? value : int.parse(value.toString())));
+      r50kBase.addAll(intData);
+    }
+  }
+
+  Future<void> initO200kBaseData({bool ignorePackageName = false}) async {
+    var prefix = 'packages/tiktoken/';
+    if (ignorePackageName == true) {
+      prefix = '';
+    }
+    for (int i = 1; i <= 6; i++) {
+      String jsonString =
+      await rootBundle.loadString('${prefix}lib/tokens/r50k_base/r50k_base_$i.json');
       Map<String, dynamic> jsonData = json.decode(jsonString);
       Map<String, int> intData = jsonData.map((key, value) =>
           MapEntry(key, value is int ? value : int.parse(value.toString())));
